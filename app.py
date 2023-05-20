@@ -6,7 +6,7 @@ import sys
 pipeline = load("text_classification.joblib")
     
 # start flask
-app = Flask(__name__)  
+app = Flask(__name__)
 
 # when the post method detect, then redirect to success function
 @app.route('/', methods=['POST', 'GET'])
@@ -25,5 +25,5 @@ def predictor():
         predarr = predarr[0]
         return predarr
 
-if __name__ == '__main__' :
+if __name__ == '__main__':
     app.run(debug=True)
